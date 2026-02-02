@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Valentine ❤️</title>
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #ffe6eb;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  position: fixed;
+  top: 40%;
+  width: 100%;
+  color: #d63384;
+  font-size: 42px;
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+<h1>❤️ Happy Valentine’s Day ❤️</h1>
+
+<script>
+setInterval(() => {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.innerHTML = "❤️";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.fontSize = (20 + Math.random() * 40) + "px";
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 6000);
+}, 120);
+</script>
+
+</body>
+</html>
